@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word Translation Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.6/lottie.min.js"></script>
+</head>
+<body>
+  <h1>🌍 Word Translation Game</h1>
+
+  <div class="setup">
+    <input type="text" id="username" placeholder="Enter your name" />
+    <select id="category">
+      <option value="all">All</option>
+      <option value="animals">Animals</option>
+      <option value="objects">Objects</option>
+      <option value="actions">Actions</option>
+    </select>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <select id="numQuestions">
+      <option value="5">5</option>
+      <option value="10" selected>10</option>
+      <option value="20">20</option>
+    </select>
+    <button onclick="startGame()">Start Game</button>
+    <button onclick="restartGame()">Restart</button>
+  </div>
+
+  <div class="game-section">
+    <h2 id="randomWord"></h2>
+    <div id="tamilOptions" class="options"></div>
+    <div id="hindiOptions" class="options"></div>
+    <div id="frenchOptions" class="options"></div>
+    <div class="score" id="score"></div>
+    <div id="result"></div>
+
+    <div class="lottie-container" id="winAnim"></div>
+    <div class="lottie-container" id="goodAnim"></div>
+    <div class="lottie-container" id="tryAnim"></div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
